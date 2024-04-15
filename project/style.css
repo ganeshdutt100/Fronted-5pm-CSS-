@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+display: flex;
+justify-content: space-around;
+background-color: rgba(0, 0, 0, 0.245);
+backdrop-filter: blur(10px);
+position: fixed;
+width: 97%;
+border-radius: 47px;
+margin-left: 18px;
+
+}
+.logo img{
+    width:  70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.list{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+.list a{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+.list a:hover{
+   color:yellow ;
+}
+.icons{
+    font-size: 30px;
+    margin-top: 15px;
+}
+.icons i{
+    border: 1px dotted rgba(0, 0, 0, 0.834);
+    padding: 7px;
+    border-radius: 50%;
+    background-color: white;
+  cursor: pointer;
+}
+
+.insta{
+    color: rgb(228, 40, 125);
+    background-color: white;
+
+}
+.insta:hover{
+    color: rgb(254, 254, 254);
+    background-color: rgb(227, 45, 173);
+    /* border: 1px dotted rgba(238, 67, 221, 0.834); */
+
+
+}
+.fb{
+    color: rgb(40, 112, 228);
+    background-color: white;
+
+}
+.fb:hover{
+    background-color: rgb(40, 112, 228);
+    color: white;
+
+}
+.git{
+    color: rgb(0, 0, 0);
+    background-color: white;
+
+}
+   .git:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
+
+
+
+}
+.linkedin{
+    color: rgb(35, 25, 236);
+    background-color: white;
+
+}
+.linkedin:hover{
+    background-color: rgb(35, 25, 236);
+    color: white;
+
+}
+
+
+/* section 1 */
+.sec1{
+    padding-top: 150px;
+    display: flex;
+    background: url('https://img.freepik.com/premium-photo/img-raindrops-window-with-blurred-cityscape-background-urban-setting-vertical-mobile-wallpaper_892776-41795.jpg?w=360');
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+    height: 100vh;
+    color: white;
+
+}
+.sec1Text{
+    /* margin-top: 96px; */
+    padding-left: 66px;
+    font-family: sans-serif;
+    /* background-color: rgba(0, 0, 0, 0.1); */
+    backdrop-filter: blur(20px);
+    height: 200px;
+    margin: 40px 50px;
+    padding-top: 10px;
+    border-radius: 30px;
+}
+.sec1Text h1{}
+.sec1Text p{
+    margin: 10px 0;
+}
+.btn{
+    color: white;
+    background: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 20px;
+
+}
+.btn:hover{
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+   }
+
+.btn:active{
+   background-color: rgb(249, 88, 88);
+   color: white;
+   }
+
+.sec1Img{
+    width: 72%;
+    margin-right: 20px;
+    
+
+}
+.sec1Img img{
+    width: 100%;
+    border-radius: 10px;
+    
+}
+
+/* .section 2 */
+.sec2{
+    margin-top:150px ;
+}
+.sec2 h1{
+text-align: center;
+
+}
+.empty{
+    width: 300px;
+    height: 5px;
+    background-color: yellow;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+.sec2main{
+ 
+    display: flex;
+  justify-content: space-around;
+}
+
+.sec2main img{
+    width:  200px;
+    height: 200px;
+    border-radius: 50%;
+   opacity: .6;
+
+}
+.sec2main img:hover{
+   opacity: 1;
+
+}
+.sec2img1{
+    width: 400px;
+    text-align: center;
+    /* border: 1px solid black; */
+    border-radius:20px ;
+    padding: 20px 0;
+    background: url('https://img.freepik.com/premium-vector/white-abstract-background-clean-wave-signal-pattern-online-communication_1406-367.jpg?w=826');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.sec2img1 p{
+   margin: 10px 0;
+}

@@ -1,0 +1,2171 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- FontAwesome 6.2.0 CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- (Optional) Use CSS or JS implementation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
+      integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style.css">
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  ::-webkit-scrollbar{
+    width: 10px;
+  
+  }
+  ::-webkit-scrollbar-thumb{
+    background-color: rgb(149, 203, 232);
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-track{
+    background-color: rgb(232, 230, 230);
+  }
+  .sec-5-1{
+    perspective: 1000px; /* Adjust the value based on your preference */
+  /* display: inline-block; */
+  overflow: hidden;
+  }
+  .sec-5-img{
+    transition: transform 0.3s ease; 
+  }
+  .sec-5-img:hover{
+    transform: scale(1.1);
+  }
+  .sec-2-box{
+    position: relative;
+ overflow: hidden;
+ text-align: center;
+
+  }
+  .sec-2-container{
+    position: absolute;
+    top: 0;
+    left: 120px;
+    transition: 1s all linear;
+    transform-origin: left;
+    
+   
+  }
+   .sec-2-container:hover{
+    transform: rotate(100deg);
+  }
+  .main-categories{
+    position: relative;
+    width: 300px;
+}
+.categories ul{
+    position: absolute;
+    top: -700px;
+    background: url('https://img.freepik.com/free-vector/blue-geometric-frame-vector_53876-140352.jpg?w=996&t=st=1688636040~exp=1688636640~hmac=d0eb5361594e3397f407aaa9c844f7707f4a5f30c1bac28c11916ec65d3aa9ba')no-repeat;
+    background-size: cover;
+  background-position: center center ;
+    border: 1px solid black;
+    border-radius: 10px;
+
+}
+.categories ul li{
+    padding:2px 10px  ;
+}
+.main-categories:hover .categories ul{
+    top: 30px;
+}
+.main-categories:hover .i-down{
+    transform: rotate(180deg);
+  }
+
+
+
+
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* For WebKit-based browsers */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #95cbe8;
+  }
+  
+  
+  
+  /*--------------------------------------------------------------------------------------------
+   learm-more 
+   -----------------------------------------------------------------------------------------*/
+  .learn-more-btn {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+  }
+  
+  .learn-more-btn.learn-more {
+    width: 12rem;
+    height: auto;
+  }
+  
+  .learn-more-btn.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #282936;
+    border-radius: 1.625rem;
+  }
+  
+  .learn-more-btn.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+  }
+  
+  .learn-more-btn.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+  }
+  
+  .learn-more-btn.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+  }
+  
+  .learn-more-btn.learn-more .learn-more-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #282936;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  .learn-more-btn:hover .circle {
+    width: 100%;
+  }
+  
+  .learn-more-btn:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+  }
+  
+  .learn-more-btn:hover .learn-more-text {
+    color: #fff;
+  }
+  
+  /*
+  -------------------------------------------------------------------------------------------
+  hover light effect on button
+  -------------------------------------------------------------------------------------------- */
+  /* === removing default button style ===*/
+  .light-effect-btn {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+  }
+  
+  /* button styling */
+  .light-effect-btn {
+    --border-right: 6px;
+    --text-stroke-color: rgba(35, 34, 34, 0.6);
+    --animation-color: #37ff8b;
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+  }
+  /* this is the text, when you hover on button */
+  .hover-light-effect-btn {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+  }
+  /* hover */
+  .light-effect-btn:hover .hover-light-effect-btn {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color));
+  }
+  
+  
+  
+  /*------------------------------------------------------
+   .light-button 
+   -------------------------------------------------------*/
+  
+  .light-button .bt {
+    position: relative;
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    outline: none;
+    background: none;
+    border: none;
+  }
+  
+  .light-button .bt .button-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100px;
+    background-color: #0a0a0a;
+    border-radius: 5px;
+    color: #0f0f0f;
+    font-weight: 700;
+    transition: 300ms;
+    outline: #0f0f0f 2px solid;
+    outline-offset: 20;
+  }
+  
+  .light-button .bt .button-holder svg {
+    height: 50px;
+    fill: #0f0f0f;
+    transition: 300ms;
+  }
+  
+  .light-button .bt .light-holder {
+    position: absolute;
+    height: 200px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .light-button .bt .light-holder .dot {
+    position: absolute;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #0a0a0a;
+    border-radius: 10px;
+    z-index: 2;
+  }
+  
+  .light-button .bt .light-holder .light {
+    position: absolute;
+    top: 0;
+    width: 200px;
+    height: 200px;
+    clip-path: polygon(50% 0%, 25% 100%, 75% 100%);
+    background: transparent;
+  }
+  
+  .light-button .bt:hover .button-holder svg {
+    fill: rgba(88, 101, 242, 1);
+  }
+  
+  .light-button .bt:hover .button-holder {
+    color: rgba(88, 101, 242, 1);
+    outline: rgba(88, 101, 242, 1) 2px solid;
+    outline-offset: 2px;
+  }
+  
+  .light-button .bt:hover .light-holder .light {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      180deg,
+      rgba(88, 101, 242, 1) 0%,
+      rgba(255, 255, 255, 0) 75%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+  
+  /* ------------------------------------------------------------
+  icon
+  ---------------------------------------------------------- */
+  .icon-btn {
+    width: 45px;
+    height: 45px;
+    /* border: none; */
+    border-radius: 50%;
+    background-color: #00acee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    transition-duration: 0.5s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.137);
+    border: 2px solid #bbecff;
+  }
+  
+  .logoIcon {
+    fill: white;
+  }
+  
+  .icon-btn-text {
+    position: absolute;
+    top: -20px;
+    opacity: 0;
+    background-color: #00acee;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 0.2s;
+    pointer-events: none;
+    letter-spacing: 0.5px;
+  }
+  
+  .icon-btn-text::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #00acee;
+    background-size: 1000%;
+    background-position: center;
+    transform: rotate(45deg);
+    bottom: -20%;
+    transition-duration: 0.3s;
+  }
+  
+  .icon-btn:hover .icon-btn-text {
+    top: -45px;
+    opacity: 1;
+    transition-duration: 0.3s;
+  }
+  
+  .icon-btn:hover {
+    background-position: right;
+    transition-duration: 0.5s;
+  }
+  
+  /* input */
+  .label {
+    --border: rgba(66, 66, 66, 0.733);
+    --bgLabel: rgba(120, 120, 120, 1);
+    --bgInput: rgba(255, 255, 255, 1);
+    --color-light: rgb(98, 0, 255);
+    --color-light-a: rgb(133, 123, 150);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content;
+    /* background: var(--bgLabel); */
+    position: relative;
+    font-size: 0.65rem;
+    transition: all 0.3s ease-out;
+  }
+  
+  .label > .label-title {
+    border: 1px solid var(--color-light);
+    color: var(--color-light);
+    box-shadow: 0 2px 2px rgba(120, 120, 120, 0.25);
+    padding: 0.25em 0.5em;
+    background-color: var(--bgInput);
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    position: relative;
+    border-radius: 4px;
+    translate: 10px -10px;
+    transition: all 0.5s ease-out 0.5s;
+    z-index: 10;
+  }
+  
+  .label:focus .input,
+  .label:focus-within .input {
+    background-color: var(--bgInput);
+    padding: 1em;
+    color: var(--color-light);
+    border: 2px solid var(--color-light);
+    outline: 2px solid var(--color-light);
+    outline-offset: -2px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(98, 0, 255, 0.25),
+      0 -5px 20px rgba(98, 0, 255, 0.1);
+    scale: 1.15;
+    transition: all 0.5s cubic-bezier(0, 1.46, 1, 1.62) 0.3s;
+  }
+  
+  .label:focus,
+  .label:focus-within .label-title {
+    translate: 10px -20px;
+    border-radius: 4px 4px 0 0;
+    z-index: 0;
+    transition: all 0.3s cubic-bezier(0, 1.46, 1, 1.62);
+  }
+  
+  .input {
+    appearance: none;
+    border-top: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid var(--color-light);
+    border-left: 2px solid transparent;
+    background-color: var(--bgInput);
+    caret-color: var(--color-light);
+    min-width: 200px;
+    padding: 1.25em 1em 0.25em;
+    outline: 0px solid var(--color-light);
+    grid-column: 1/-1;
+    grid-row: 1 / -1;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.5, 0.6, 0.5, 0.62);
+    z-index: 0;
+  }
+  
+  .input,
+  .input::placeholder {
+    color: var(--color-light-a);
+  }
+  
+  /* 
+  -------------------------------card--book------------------ */
+  
+  .book {
+    position: relative;
+    border-radius: 10px;
+    width: 220px;
+    height: 300px;
+    background-color: whitesmoke;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #000;
+    -webkit-transform: preserve-3d;
+    -ms-transform: preserve-3d;
+    transform: preserve-3d;
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #000;
+  }
+  
+  .cover {
+    top: 0;
+    position: absolute;
+    background-color: lightgray;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform-origin: 0;
+    -ms-transform-origin: 0;
+    transform-origin: 0;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  
+  .book:hover .cover {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform: rotatey(-80deg);
+    -ms-transform: rotatey(-80deg);
+    transform: rotatey(-100deg);
+  }
+  
+  /* p {
+    font-size: 20px;
+    font-weight: bolder;
+  } */
+  
+  /*------------------------------------------- bottom-slid-card-------------------------------------------------------
+  ------------------------------------------- ----------------------------------------------*/
+  .card_1 {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #ffffff80;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .card_1 svg {
+    width: 48px;
+    fill: #333;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .card_1:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+  }
+  
+  .card__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .card_1:hover .card__content {
+    transform: rotateX(0deg);
+  }
+  
+  .card__title {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+    font-weight: 700;
+  }
+  
+  .card_1:hover svg {
+    scale: 0;
+  }
+  
+  .card__description {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: #777;
+    line-height: 1.4;
+  }
+  
+  /*-------------------------------------------------------------
+   clock
+   --------------------------------------- */
+  .face {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    outline: 10px solid #333;
+    background: repeating-radial-gradient(
+        circle at 50% 50%,
+        rgba(200, 200, 200, 0.2) 0%,
+        rgba(200, 200, 200, 0.2) 2%,
+        transparent 2%,
+        transparent 3%,
+        rgba(200, 200, 200, 0.2) 3%,
+        transparent 3%
+      ),
+      conic-gradient(
+        white 0%,
+        silver 10%,
+        white 35%,
+        silver 45%,
+        white 60%,
+        silver 70%,
+        white 80%,
+        silver 95%,
+        white 100%
+      );
+    box-shadow: inset 0 0 20px #0007;
+  }
+  
+  .hour {
+    position: absolute;
+    width: 5px;
+    height: 60px;
+    background: #aaa;
+    left: 87.5px;
+    top: 43px;
+    border-radius: 3px 3px 1px 1px;
+    transform-origin: 2px 47px;
+    box-shadow: 0 0 5px #0005, inset 1.5px 3px 0px #333,
+      inset -1.5px -3px 0px #333;
+    z-index: 1;
+    animation: watch 43200s linear infinite;
+  }
+  
+  .minute {
+    position: absolute;
+    width: 4px;
+    height: 78px;
+    background: #aaa;
+    left: 88px;
+    top: 25px;
+    border-radius: 3px 3px 1px 1px;
+    transform-origin: 2px 65px;
+    box-shadow: 0 0 5px #0005, inset 1.5px 3px 0px #333,
+      inset -1.5px -3px 0px #333;
+    z-index: 2;
+    animation: watch 3600s linear infinite;
+  }
+  
+  .second {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: red;
+    left: 85px;
+    top: 85px;
+    border-radius: 50%;
+    border: 1px solid #eee;
+    z-index: 3;
+    animation: watch 60s steps(60, end) 0s infinite;
+  }
+  
+  .second::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 85px;
+    left: 3px;
+    bottom: -10px;
+    background: red;
+    border-radius: 2px;
+    box-shadow: 5px 0 2px rgba(128, 128, 128, 0.2);
+  }
+  
+  .second::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    left: 2px;
+    top: 2px;
+    background: #555;
+    border-radius: 50%;
+  }
+  
+  .v-index {
+    position: absolute;
+    color: #333;
+    font-size: 24px;
+    left: 83.5px;
+    top: -3px;
+    text-shadow: 0 157px 0 #333;
+    z-index: 1;
+  }
+  
+  .h-index {
+    position: absolute;
+    color: #333;
+    font-size: 24px;
+    top: 72px;
+    left: 5px;
+    transform: rotate(-90deg);
+    text-shadow: 0 158px 0 #333;
+    z-index: 1;
+  }
+  
+  @keyframes watch {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* --------------------------------------
+  icon short name and full name facebook
+  ----------------------------------------------------- */
+  
+  .button-fb {
+    width: 45px;
+    height: 45px;
+    background-color: #3b5998;
+    border: none;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.185),
+      0px 3px 3px rgba(255, 255, 255, 0.178) inset,
+      0px -3px 3px rgba(0, 0, 0, 0.281) inset;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding-bottom: 3px;
+  }
+  
+  .button-fb::before {
+    background-color: transparent;
+    content: "f";
+    font-size: 1.6em;
+    font-weight: 700;
+    color: white;
+    z-index: 5;
+    transition: all 0.3s;
+    font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+      Helvetica, Arial, sans-serif;
+  }
+  
+  .button-fb::after {
+    content: "acebook";
+    background-color: transparent;
+    font-size: 0;
+    opacity: 0;
+    font-weight: 700;
+    color: white;
+    z-index: 5;
+    transition: all 0.3s;
+    transform: translateX(60px);
+    font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+      Helvetica, Arial, sans-serif;
+  }
+  
+  .button-fb:hover {
+    width: 160px;
+    border-radius: 30px;
+  }
+  
+  .button-fb:hover::after {
+    opacity: 1;
+    font-size: 1.6em;
+    transform: translateX(0px);
+  }
+  
+  .button-fb:hover .shine {
+    transform: translate(-70px, 10px);
+  }
+  
+  /* 
+  ------------------------button-write ---------------------------------------*/
+  
+  .cti {
+    background-color: #6019bd;
+    padding: 17px 30px;
+    border: 3px solid transparent;
+    border-radius: 0.6em;
+    transition: 0.2s;
+  }
+  
+  .cti:hover {
+    background-color: transparent;
+    border: 3px solid #6019bd;
+    box-shadow: 0px 0px 27px 5px #6019bd;
+  }
+  
+  .CTI {
+    color: #1a1a1a;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 17px;
+    font-weight: bold;
+    overflow: hidden;
+    border-right: 4px solid transparent;
+    white-space: nowrap;
+    margin: 0 auto;
+  }
+  
+  .cti:hover .CTI {
+    border-right: 4px solid #6019bd;
+    animation: letters 1.75s steps(22, end), cursor 0.4s step-end infinite;
+  }
+  
+  @keyframes letters {
+    from {
+      width: 0;
+    }
+  
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes cursor {
+    from {
+      border-color: transparent;
+    }
+  
+    50% {
+      border-color: #6019bd;
+    }
+  }
+  
+  /* --------------------------------------
+  price button
+  ----------------------------------------------------- */
+  .price-button {
+    --width: 100px;
+    --height: 35px;
+    --tooltip-height: 35px;
+    --tooltip-width: 90px;
+    --gap-between-tooltip-to-button: 18px;
+    --button-color: #222;
+    --tooltip-color: #fff;
+    width: var(--width);
+    height: var(--height);
+    background: var(--button-color);
+    position: relative;
+    text-align: center;
+    border-radius: 0.45em;
+    font-family: "Arial";
+    transition: background 0.3s;
+  }
+  
+  .price-button::before {
+    position: absolute;
+    content: attr(data-tooltip);
+    width: var(--tooltip-width);
+    height: var(--tooltip-height);
+    background-color: #555;
+    font-size: 0.9rem;
+    color: #fff;
+    border-radius: 0.25em;
+    line-height: var(--tooltip-height);
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+    left: calc(50% - var(--tooltip-width) / 2);
+  }
+  
+  .price-button::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: #555;
+    left: calc(50% - 10px);
+    bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+  }
+  
+  .price-button::after,
+  .price-button::before {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+  }
+  
+  .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button-wrapper,
+  .text,
+  .price-icon {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    color: #fff;
+  }
+  
+  .text {
+    top: 0;
+  }
+  
+  .text,
+  .price-icon {
+    transition: top 0.5s;
+  }
+  
+  .price-icon {
+    color: #fff;
+    top: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .price-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .price-button:hover {
+    background: #222;
+  }
+  
+  .price-button:hover .text {
+    top: -100%;
+  }
+  
+  .price-button:hover .price-icon {
+    top: 0;
+  }
+  
+  .price-button:hover:before,
+  .price-button:hover:after {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .price-button:hover:after {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+  }
+  
+  .price-button:hover:before {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+  }
+  
+  
+  /* animation */
+  .left-right-animate{
+      -webkit-animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+              animation: tracking-in-contract 0.9s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  }
+  
+   @-webkit-keyframes tracking-in-contract {
+    0% {
+      letter-spacing: 1em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      letter-spacing: normal;
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-contract {
+    0% {
+      letter-spacing: 1em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      letter-spacing: normal;
+      opacity: 1;
+    }
+  }
+  
+  /* 2 */
+  .animate-hover-effect:hover {
+      -webkit-animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+              animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  }
+  
+   @-webkit-keyframes tracking-in-expand-fwd {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-transform: translateZ(-700px);
+              transform: translateZ(-700px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-expand-fwd {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-transform: translateZ(-700px);
+              transform: translateZ(-700px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+  
+  /* 3 */
+  .animate-bounce-top{
+    height: 50px;
+  }
+  .animate-bounce-top:hover .anmimate-bounce-top-btn {
+  
+  -webkit-animation: bounce-top 0.9s both;
+          animation: bounce-top 0.9s both;
+  }
+  
+  @-webkit-keyframes bounce-top {
+  0% {
+    -webkit-transform: translateY(-45px);
+            transform: translateY(-45px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: translateY(-24px);
+            transform: translateY(-24px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  65% {
+    -webkit-transform: translateY(-12px);
+            transform: translateY(-12px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  82% {
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  93% {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  25%,
+  55%,
+  75%,
+  87% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  }
+  @keyframes bounce-top {
+  0% {
+    -webkit-transform: translateY(-45px);
+            transform: translateY(-45px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: translateY(-24px);
+            transform: translateY(-24px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  65% {
+    -webkit-transform: translateY(-12px);
+            transform: translateY(-12px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  82% {
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  93% {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  25%,
+  55%,
+  75%,
+  87% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  }
+  
+  
+  /* --------------------------multiple images cards -----------------*/
+  
+  .multiple-image-card {
+          
+    width: 190px;
+    height: 254px;
+    background: rgba(211, 211, 211, 0.199);
+    position: absolute;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0px 0px 30px -10px rgba(0, 0, 0, 0.3);
+  }
+  
+  #c1 {
+    background-color: black;
+  }
+  
+  #c2 {
+    background-color: blue;
+  }
+  
+  #c3 {
+    background-color: red;
+  }
+  
+  #c4 {
+    background-color: green;
+  }
+  
+  .multiple-image-main:hover #c1 {
+    transform: translateX(-100px) rotate(-40deg);
+  }
+  
+  .multiple-image-main:hover #c2 {
+    transform: translateX(-50px) rotate(-30deg);
+  }
+  
+  .multiple-image-main:hover #c3 {
+    transform: translateX(0) rotate(-20deg);
+  }
+  
+  .multiple-image-main:hover #c4 {
+    transform: translateX(50px) rotate(-10deg);
+  }
+  
+  #c1:hover {
+    transform: translateX(-200px) rotate(0deg) !important;
+  }
+  
+  #c2:hover {
+    transform: translateX(-150px) rotate(0deg) !important;
+  }
+  
+  #c3:hover {
+    transform: translateX(-130px) rotate(0deg) !important;
+  }
+  
+  #c4:hover {
+    transform: translateX(50px) rotate(0deg) !important;
+  }
+  
+  .multiple-image-main {
+    display: grid;
+    height: 50vmax;
+    place-items: center;
+    width: 200px;
+  }
+  
+  
+  /* log-in-button */
+  .log-in-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background-color: rgb(255, 65, 65);
+  }
+  
+  /* plus log-in */
+  .log-in {
+      width: 100%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .log-in svg {
+      width: 17px;
+  }
+  
+  .log-in svg path {
+      fill: white;
+  }
+  /* log-in-text */
+  .log-in-text {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition-duration: .3s;
+  }
+  /* hover effect on button width */
+  .log-in-btn:hover {
+    width: 125px;
+    border-radius: 40px;
+    transition-duration: .3s;
+  }
+  
+  .log-in-btn:hover .log-in {
+      width: 30%;
+      transition-duration: .3s;
+    padding-left: 20px;
+  }
+  /* hover effect button's log-in-text */
+  .log-in-btn:hover .log-in-text {
+      opacity: 1;
+      width: 70%;
+      transition-duration: .3s;
+      padding-right: 10px;
+  }
+  /* button click effect*/
+  .log-in-btn:active {
+      transform: translate(2px ,2px);
+  }
+  
+  /*------------------ blur-card------------------ */
+  
+  .card-blur {
+    width: 190px;
+    height: 254px;
+    transition: all 0.2s;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .card-blur-inner {
+    width: inherit;
+    height: inherit;
+    background: rgba(255,255,255,.05);
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+  }
+  
+  .card-blur:hover {
+    transform: scale(1.04) rotate(1deg);
+  }
+  
+  .circle-blur {
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(#b0e633, #53ef7d);
+    border-radius: 50%;
+    position: absolute;
+    animation: move-up6 2s ease-in infinite alternate-reverse;
+  }
+  
+  .circle-blur:nth-child(1) {
+    top: -25px;
+    left: -25px;
+  }
+  
+  .circle-blur:nth-child(2) {
+    bottom: -25px;
+    right: -25px;
+    animation-name: move-down1;
+  }
+  
+  @keyframes move-up6 {
+    to {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes move-down1 {
+    to {
+      transform: translateY(10px);
+    }
+  }
+  
+  /*----------------------- rotate-item-card----------------------------------------------------- */
+  
+  .rotate-item-card {
+    position: relative;
+    top: 2em;
+    width: 12.5em;
+    height: 6.5em;
+    background: white;
+    transition: .4s ease-in-out;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+    overflow: hidden;
+  }
+  
+  .rotate-item-heading {
+    position: relative;
+    color: black;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding-top: 1em;
+    padding-left: 1em;
+    transition: .4s ease-in-out;
+  }
+  
+  .rotate-item-details {
+    position: relative;
+    color: black;
+    font-size: 0.6em;
+    padding-top: 1.5em;
+    padding-left: 2em;
+    transition: .4s ease-in-out;
+  }
+  
+  .rotate-item-price {
+    position: relative;
+    color: black;
+    font-weight: bold;
+    font-size: 0.8em;
+    padding-top: 1.5em;
+    padding-left: 1.5em;
+    top: 9.6em;
+    left: 5em;
+    transition: .4s ease-in-out;
+  }
+  
+  .rotate-item-btn1 {
+    position: relative;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    font-size: 0.6em;
+    padding-left: 6.9em;
+    padding-right: 6.9em;
+    padding-top: 0.8em;
+    padding-bottom: 0.85em;
+    border-radius: 10px;
+    left: 2.6em;
+    top: 14.8em;
+    transition: .4s ease-in-out;
+    font-weight: bold;
+  }
+  
+  .rotate-item-btn1:hover {
+    background-color: limegreen;
+    cursor: pointer;
+  }
+  
+  .rotate-item-btn2 {
+    position: relative;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    font-size: 0.6em;
+    padding-left: 5.1em;
+    padding-right: 5.1em;
+    padding-top: 0.8em;
+    padding-bottom: 0.85em;
+    border-radius: 10px;
+    left: 2.6em;
+    right: 2.6em;
+    top: 15.5em;
+    transition: .4s ease-in-out;
+    font-weight: bold;
+  }
+  
+  .rotate-item-btn2:hover {
+    background-color: limegreen;
+    cursor: pointer;
+  }
+  
+  .glasses {
+    position: relative;
+    top: -3.5em;
+    left: 10em;
+    width: 70px;
+    height: 70px;
+    transition: .4s ease-in-out;
+  }
+  
+  .rotate-item-card:hover {
+    width: 12.5em;
+    height: 22.7em;
+    transform: translateY(1.25em);
+  }
+  
+  .rotate-item-card:hover + .glasses {
+    transform: rotateX(360deg);
+    height: 100px;
+    width: 100px;
+    left: 3em;
+    top: -17.5em;
+  }
+  
+  .rotate-item-card:hover .rotate-item-heading {
+    transform: translateY(7em) translateX(2.3em);
+  }
+  
+  .rotate-item-card:hover .rotate-item-details {
+    transform: translateY(13em) translateX(3.5em);
+  }
+
+</style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm navbar-dark fixed-top" style="background-color: #c1d8e9;">
+      <a class="navbar-brand text-primary-emphasis fs-3 fw-bold ms-4" href="#">Learn  <span class="text-danger me-1">&</span><span class="text-primary">Grow</span></a>
+      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+          aria-expanded="false" aria-label="Toggle navigation"><i class="fa-solid fa-bars-staggered text-black"></i></button>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <span class="nav-item main-categories">
+          <a class="nav-link active" href="#" aria-current="page"><i class="fa-solid fa-braille me-2"></i>Categories<i class="fa-solid fa-circle-chevron-down ms-2 i-down"></i><span class="visually-hidden">(current)</span></a>
+          <div class="categories">
+              <ul>
+                  <li>Software engineering</li>
+                  <li>Web developers</li>
+                  <li>Java full stack developer</li>
+                  <li>Murn full stMurnack developer</li>
+                  <li>Python  full stMurnack developer</li>
+                  <li>Data science</li>
+                  <li>Data algorithm</li>
+                  <li>Artificial intelligence </li>
+                  <li>Robotic study </li>
+                  <li> Computer deep learning </li>
+                  <li>Software engineering</li>
+                  <li>Web developers</li>
+                  <li>Java full stack developer</li>
+                 
+                  <li> C++</li>
+                  <li> Java</li>
+                  <li>Advanced Java </li>
+                  <li>And many more languages are free</li>
+              </ul>
+          </div>
+      </span>
+          <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link text-black active " href="#" aria-current="page">Home <span class="visually-hidden">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link text-black" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link text-black" href="#">Join Free</a>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link text-black dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language</a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownId">
+                      <a class="dropdown-item" href="#">Hindi</a>
+                      <a class="dropdown-item" href="#">English</a>
+                      <a class="dropdown-item" href="#">Tamil</a>
+                      <a class="dropdown-item" href="#">Bangoli </a>
+                  </div>
+              </li>
+          </ul>
+          <form class="d-flex my-2 my-lg-0 me-1">
+              <input class="form-control me-sm-2" type="text" placeholder="Search">
+              <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+         <a href="contect.html" target="_blank">   <button class="btn btn-outline-primary px-3 me-5" type="submit">Login<i class="fa fa-sign-in" aria-hidden="true"></i></button></a>
+      </div>
+  </nav>
+ 
+  <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel" data-bs-theme="light" style="margin-top: 50px;">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" style="background: url(https://www.learnvern.com/images/new-home-assets/back-img.png)no-repeat;
+      background-size: cover; height:580px ;">
+        <img src="https://www.learnvern.com/images/new-home-assets/home-desktop-banner.png" alt=""  height="580px" class="float-end">
+        <div class="container ">
+          <div class="carousel-caption mb-5 text-start text-primary-emphasis">
+            <h1>Learn Any Course for <br> <span class="text-danger text-decoration-underline">Free </span> in Your <br> own Language </h1>
+            <p class="opacity-75">Some representative placeholder content for the first slide of the carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Join For Free</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://cdn.pixabay.com/photo/2016/02/18/19/25/pc-1207886_1280.jpg" alt="" width="100%" height="580px">
+        <div class="container">
+          <div class="carousel-caption ">
+            <h1 >Learn Any Course for <br> <span class="text-danger text-decoration-underline">Free </span> in Your <br> own Language </h1>
+            <p class="opacity-75">Some representative placeholder content for the first slide of the carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Join For Free</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://cdn.pixabay.com/photo/2017/07/31/11/44/laptop-2557571_1280.jpg" alt="" width="100%" height="580px">
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1 class="text-danger">Learn Any Course for <br> <span class="text-white text-decoration-underline">Free </span> in Your <br> own Language </h1>
+            <p class="opacity-75">Some representative placeholder content for the first slide of the carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Join For Free</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  
+
+  <!-- section_2 -->
+  <div class="sec-2 " style="padding: 80px 0; background-color: #e5f6fcc2;">
+  <div class="container">
+    <h1 class="text-center text-primary-emphasis">Welcome to Learn <span class="text-danger">&</span> <span class="text-primary">Grow</span></h1>
+    <div class="bg-primary mx-auto  rounded-circle" style="width: 200px ; height: 5px ; margin-bottom: 80px;" ></div>
+    <div class="row pt-5">
+      <div class="col-lg-4 text-center sec-2-box">
+        <img src="https://img.freepik.com/free-vector/flat-design-online-courses-illustration_23-2148528493.jpg?w=740&t=st=1688740334~exp=1688740934~hmac=f478a5a3c0f2b2c221aa41d80af540c32ccf199b2864780e97f1dbfc3983328b" alt="" width="140" height="140" class="rounded-circle">
+        <div class="sec-2-container">
+          <img src="https://img.freepik.com/free-photo/html-css-collage-concept-with-person_23-2150062008.jpg?size=626&ext=jpg" alt=""width="140" height="140" class="rounded-circle text-center">
+        </div>
+        <h2 class="fw-normal mt-2 ms-1 text-center" >Online Courses</h2>
+        <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+        <div class="learn-more learn-more-btn">
+          <span class="circle">
+            <span class="icon arrow"></span>
+            <span class="learn-more-text px-4">Learn&nbsp;More</span>
+
+          </span>
+        </div>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4 text-center mt-5 mt-lg-0 sec-2-box">
+        <img src="https://img.freepik.com/free-vector/teacher-concept-profesor-standing-front-blackboard-school-college-workers-with-professional-discipline-tools-idea-education-knowledge-flat-vector-illustration_613284-1977.jpg?size=626&ext=jpg" alt="" width="140" height="140" class="rounded-circle">
+        <div class="sec-2-container">
+          <img src="https://img.freepik.com/free-photo/smiley-woman-holding-book-front-view_23-2149915887.jpg?size=626&ext=jpg" alt=""width="140" height="140" class="rounded-circle text-center">
+        </div>
+        <h2 class="fw-normal mt-2 ms-1">Expert Teacher</h2>
+        <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
+        <div class="learn-more learn-more-btn">
+          <span class="circle">
+            <span class="icon arrow"></span>
+            <span class="learn-more-text px-4">Learn&nbsp;More</span>
+          </span>
+        </div>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4 text-center mt-5 mt-lg-0 sec-2-box">
+        <img src="https://img.freepik.com/free-vector/connected-world-concept-illustration_114360-4240.jpg?size=626&ext=jpg" alt="" width="140" height="140" class="rounded-circle">
+        <div class="sec-2-container">
+          <img src="https://img.freepik.com/premium-photo/marketing-target-audience-concept-businessman-writing-red-circle-mark-focus-customer-group_29488-6245.jpg?size=626&ext=jpg" alt=""width="140" height="140" class="rounded-circle text-center">
+        </div>
+        <h2 class="fw-normal mt-2 ms-1">Community</h2>
+        <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+        <div class="learn-more learn-more-btn">
+          <span class="circle">
+            <span class="icon arrow"></span>
+            <span class="learn-more-text px-4">Learn&nbsp;More</span>
+
+          </span>
+        </div>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+  </div>
+</div>
+
+<!-- section_3 -->
+<div class="sec-3 " style="padding-top: 100px; background-color: #e5f6fc91;">
+
+<div class="container">
+  <h1 class="text-center text-primary-emphasis ">Courses By <span class="text-primary">Category</span> </h1>
+  <div class="bg-primary mx-auto  rounded-circle" style="width: 200px ; height: 5px ; margin-bottom: 100px;" ></div>
+  <div class="row mx-auto">
+    <div class="col-lg-3 col-12 col-md-6" >
+    <div class="card_1" style="background: url(	https://www.learnvern.com/images/new-home-assets/course-category-bg.png)no-repeat;
+    background-size: cover;
+    background-position: center;">
+      <img src="https://assets.learnvern.com/category/banner_images/webp_images/124578.webp" alt=""  class="rounded-circle">
+      <p class="text-primary-emphasis text-center fs-6 fw-bold">Live Training</p>
+      <span class="badge bg-primary">7 courses !</span>
+      <div class="card__content">
+        <p class="card__title">Card Title</p>
+        <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      </div>
+    </div>
+  </div>
+
+
+    <div class="col-lg-3 col-12 col-md-6 mt-3 mt-lg-0" >
+     <div class="card_1" style="background: url(	https://www.learnvern.com/images/new-home-assets/course-category-bg.png)no-repeat;
+    background-size: cover;
+    background-position: center;">
+      <img src="https://assets.learnvern.com/category/banner_images/webp_images/784552.webp" alt="" width="50%" height="50%" class="rounded-circle">
+      <p class="text-primary-emphasis text-center fs-6 fw-bold">Free Webinar</p>
+      <span class="badge bg-primary">47 courses !</span>
+      <div class="card__content">
+        <p class="card__title">Card Title</p>
+        <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      </div>
+    </div>
+  </div>
+    <div class="col-lg-3 col-12 col-md-6 mt-3 mt-lg-0" >
+       <div class="card_1" style="background: url(	https://www.learnvern.com/images/new-home-assets/course-category-bg.png)no-repeat;
+    background-size: cover;
+    background-position: center;">
+      <img src="https://assets.learnvern.com/category/banner_images/webp_images/59123.webp" alt="" width="50%" height="50%" class="rounded-circle">
+      <p class="text-primary-emphasis text-center fs-6 fw-bold">Stock Market • Import Export • HR Recruitment</p>
+      <span class="badge bg-primary">8 courses !</span>
+      <div class="card__content">
+        <p class="card__title">Card Title</p>
+        <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      </div>
+    </div>
+  </div>
+    <div class="col-lg-3 col-12 col-md-6 mt-3 mt-lg-0" >
+       <div class="card_1" style="background: url(	https://www.learnvern.com/images/new-home-assets/course-category-bg.png)no-repeat;
+    background-size: cover;
+    background-position: center;">
+      <img src="https://assets.learnvern.com/category/banner_images/webp_images/36609.webp" alt="" width="50%" height="50%" class="rounded-circle">
+      <p class="text-primary-emphasis text-center fs-6 fw-bold">Personality Development • Soft Skills • Spoken English</p>
+      <span class="badge bg-primary">8 courses !</span>
+      <div class="card__content">
+        <p class="card__title">Card Title</p>
+        <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row mx-auto mt-3 d-none d-md-flex">
+    <div class="col-lg-3 col-12 col-md-6" >
+    <div class="card_1" style="background: url(	https://www.learnvern.com/images/new-home-assets/course-category-bg.png)no-repeat;
+    background-size: cover;
+    background-position: center;">
+      <img src="https://assets.learnvern.com/category/banner_images/webp_images/75828.webp" alt="" width="50%" height="50%" class="rounded-circle">
+      <p class="text-primary-emphasis text-center fs-6 fw-bold">Live Training</p>
+      <span class="badge bg-primary">7 courses !</span>
+      <div class="card__content">
+        <p class="card__title">Card Title</p>
+        <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      </div>
+    </div>
+  </div>
+
+
+    <div class="col-lg-3 col-12 col-md-6 mt-3 mt-lg-0" >
+     <div class="card_1 flex-column " style="background: url(	https://www.learnvern.com/images/new-home-assets/course-category-bg.png)no-repeat;
+    background-size: cover;
+    background-position: center;">
+      <img src="https://img.freepik.com/free-vector/students-watching-online-training-video-with-teacher-chart-tablet-online-teaching-share-your-knowledge-english-teacher-online-concept_335657-797.jpg?size=626&ext=jpg" alt="" width="50%" height="50%" class="rounded-circle">
+      <p class="text-primary-emphasis text-center fs-6 fw-bold">Free Webinar</p>
+      <p class="badge bg-primary">47 courses !</p>
+      <div class="card__content">
+        <p class="card__title">Card Title</p>
+        <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      </div>
+    </div>
+  </div>
+    <div class="col-lg-3 col-12 col-md-6 mt-3 mt-lg-0" >
+       <div class="card_1" style="background: url(	https://www.learnvern.com/images/new-home-assets/course-category-bg.png)no-repeat;
+    background-size: cover;
+    background-position: center;">
+      <img src="https://img.freepik.com/free-vector/online-education-glow-isometric-composition-with-view-hi-tech-anvironment-with-people-computers-teacher_1284-26597.jpg?size=626&ext=jpg" alt="" width="50%" height="50%" class="rounded-circle">
+      <p class="text-primary-emphasis text-center fs-6 fw-bold">Stock Market • Import Export • HR Recruitment</p>
+      <span class="badge bg-primary">8 courses !</span>
+      <div class="card__content">
+        <p class="card__title">Card Title</p>
+        <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      </div>
+    </div>
+  </div>
+    <div class="col-lg-3 col-12 col-md-6 mt-3 mt-lg-0" >
+       <div class="card_1" style="background: url(	https://www.learnvern.com/images/new-home-assets/course-category-bg.png)no-repeat;
+    background-size: cover;
+    background-position: center;">
+      <img src="https://img.freepik.com/free-vector/webinar-landing-page-template_23-2148800229.jpg?size=626&ext=jpg" alt="" width="50%" height="50%" class="rounded-circle">
+      <p class="text-primary-emphasis text-center fs-6 fw-bold">Personality Development • Soft Skills • Spoken English</p>
+      <span class="badge bg-primary">8 courses !</span>
+      <div class="card__content">
+        <p class="card__title">Card Title</p>
+        <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      </div>
+    </div>
+  </div>
+
+
+
+  </div>
+</div>
+
+</div>
+
+<div class="sec-4" style="margin-top: 100px;">
+  <div class="container">
+    <h1 class="text-center text-primary-emphasis ">Courses By <span class="text-primary">Language<i class="fa fa-language" aria-hidden="true"></i></span> </h1>
+  <div class="bg-primary mx-auto  rounded-circle" style="width: 200px ; height: 5px ; margin-bottom: 100px;" ></div>
+  <div class="row d-flex flex-wrap justify-content-center gap-5">
+    <div class="book" style=" background: url(https://img.freepik.com/premium-vector/om-aum-symbol-hindu-deity-god-shiva_414119-29.jpg?size=626&ext=jpg)no-repeat;
+    background-size: cover; background-position: center center;">
+      <h1 class="fw-bold text-primary-emphasis">Hindi</h1>
+      <p class="badge bg-primary">New 31 Courses!</p>
+      <div class="cover" style="box-shadow: none;">
+        <img src="https://img.freepik.com/free-vector/happy-hindi-divas-indian-national-tounge-celebration-background-design_1055-15257.jpg?size=626&ext=jpg" alt="" width="100%" height="100%" class="rounded" >
+      </div>
+    </div>
+    <div class="book" style=" background: url(https://img.freepik.com/free-vector/hand-painted-watercolor-abstract-watercolor-background_23-2149005675.jpg?size=626&ext=jpg)no-repeat;
+    background-size: cover; background-position: center center;">
+      <h1 class="fw-bold text-primary-emphasis ">ENGLISH</h1>
+      <p class="badge bg-primary">New 41 Courses!</p>
+
+      <div class="cover " style="box-shadow: none;">
+        <img src="https://img.freepik.com/free-vector/hand-drawn-english-book-illustration_23-2149517759.jpg?size=626&ext=jpg" alt="" width="100%" height="100%" class="rounded" >
+      </div>
+    </div>
+    <div class="book" style=" background: url(https://img.freepik.com/free-vector/low-poly-abstract-background_1048-7981.jpg?size=626&ext=jpg)no-repeat;
+    background-size: cover; background-position: center center;">
+      <h1 class="fw-bold text-primary-emphasis text-uppercase">Tamil </h1>
+      <p class="badge bg-primary">New 21 Courses!</p>
+
+      <div class="cover " style="box-shadow: none;">
+        <img src="https://img.freepik.com/free-vector/realistic-illustration-tamil-new-year-celebration_23-2150189528.jpg?size=626&ext=jpg" alt="" width="100%" height="100%" class="rounded" >
+      </div>
+    </div>
+    <div class="book" style=" background: url(https://img.freepik.com/free-vector/blue-curve-background_53876-113112.jpg?size=626&ext=jpg)no-repeat;
+    background-size: cover; background-position: center center;">
+      <h1 class="fw-bold text-primary-emphasis text-uppercase">Bangoli</h1>
+      <p class="badge bg-primary">New 11 Courses!</p>
+
+      <div class="cover " style="box-shadow: none; background: url(https://img.freepik.com/free-vector/welcome-composition-different-languages_23-2147866940.jpg?w=740&t=st=1688749521~exp=1688750121~hmac=2827f0f7eb67796a4f35d2d15b65d2b7faf7702cdaa7df4ba0d61c02e12e4627)no-repeat;
+      background-size: cover; background-position: center center;">">
+      <p class="fs-1 fw-bold text-primary-emphasis mt-5">BANGOLI</p>
+      
+        <!-- <img src="https://img.freepik.com/free-vector/happy-hindi-divas-indian-national-tounge-celebration-background-design_1055-15257.jpg?size=626&ext=jpg" alt="" width="100%" height="100%" class="rounded" > -->
+
+      </div>
+    </div>
+  </div>
+    
+  </div>
+</div>
+
+   
+
+
+
+
+
+
+
+
+
+  <!-- section_5 -->
+  <div class="sec-5" style="margin-top: 100px;">
+    <div class="container">
+      <h1 class="text-center text-primary-emphasis ">Courses For<span class="text-primary">Career Growth</span> </h1>
+      <div class="bg-primary mx-auto  rounded-circle" style="width: 200px ; height: 5px ; margin-bottom: 100px;" ></div>
+  
+
+
+   <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+<div class="col">
+<div class="card border-primary sec-5-1">
+  <img class="card-img-top sec-5-img" src="https://img.freepik.com/free-photo/programming-background-collage_23-2149901776.jpg?size=626&ext=jpg" alt="Title" class="img-fluid" height="200px">
+  <div class="card-body">
+    <h4 class="card-title  text-primary-emphasis">HTML</h4>
+    <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident nemo autem debitis, </p>
+  <span class="me-4"><i class="fa fa-user" aria-hidden="true"></i>12342</span>
+  <i class="fa fa-star text-warning" aria-hidden="true"></i>
+  <i class="fa fa-star text-warning" aria-hidden="true"></i>
+  <i class="fa fa-star text-warning" aria-hidden="true"></i>
+  <i class="fa fa-star text-warning" aria-hidden="true"></i>
+  <i class="fa fa-star-half text-warning" aria-hidden="true"></i>
+  <span class="btn btn-warning ms-2">Enroll Now</span>
+  </div>
+</div>
+</div>
+
+<!-- 2 -->
+<div class="col">
+  <div class="card border-primary sec-5-1">
+    <img class="card-img-top sec-5-img" src="https://img.freepik.com/free-vector/web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer-project-engineer-programming-software-application-design-cartoon-illustration_107791-3863.jpg?size=626&ext=jpg" alt="Title" class="img-fluid" height="200px">
+    <div class="card-body">
+      <h4 class="card-title text-primary-emphasis">CSS</h4>
+      <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident nemo autem debitis, </p>
+    <span class="me-4"><i class="fa fa-user" aria-hidden="true"></i>12342</span>
+    <i class="fa fa-star text-warning" aria-hidden="true"></i>
+    <i class="fa fa-star text-warning" aria-hidden="true"></i>
+    <i class="fa fa-star text-warning" aria-hidden="true"></i>
+    <i class="fa fa-star text-warning" aria-hidden="true"></i>
+    <i class="fa fa-star-half text-warning" aria-hidden="true"></i>
+    <span class="btn btn-warning ms-2">Enroll Now</span>
+    </div>
+  </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="col">
+    <div class="card border-primary sec-5-1">
+      <img class="card-img-top sec-5-img" src="https://img.freepik.com/free-vector/programmers-using-javascript-programming-language-computer-tiny-people-javascript-language-javascript-engine-js-web-development-concept-bright-vibrant-violet-isolated-illustration_335657-986.jpg?size=626&ext=jpg" alt="Title" class="img-fluid" height="200px">
+      <div class="card-body">
+        <h4 class="card-title text-primary-emphasis ">JavaScript</h4>
+        <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident nemo autem debitis, </p>
+      <span class="me-4"><i class="fa fa-user" aria-hidden="true"></i>12342</span>
+      <i class="fa fa-star text-warning" aria-hidden="true"></i>
+      <i class="fa fa-star text-warning" aria-hidden="true"></i>
+      <i class="fa fa-star text-warning" aria-hidden="true"></i>
+      <i class="fa fa-star text-warning" aria-hidden="true"></i>
+      <i class="fa fa-star-half text-warning" aria-hidden="true"></i>
+      <span class="btn btn-warning ms-2">Enroll Now</span>
+      </div>
+    </div>
+    </div>
+
+    </div>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 d-none d-lg-flex mt-3">
+<div class="col">
+<div class="card border-primary sec-5-1">
+  <img class="card-img-top sec-5-img" src="https://img.freepik.com/free-photo/programming-background-collage_23-2149901776.jpg?size=626&ext=jpg" alt="Title" class="img-fluid" height="200px">
+  <div class="card-body">
+    <h4 class="card-title  text-primary-emphasis">HTML</h4>
+    <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident nemo autem debitis, </p>
+  <span class="me-4"><i class="fa fa-user" aria-hidden="true"></i>12342</span>
+  <i class="fa fa-star text-warning" aria-hidden="true"></i>
+  <i class="fa fa-star text-warning" aria-hidden="true"></i>
+  <i class="fa fa-star text-warning" aria-hidden="true"></i>
+  <i class="fa fa-star text-warning" aria-hidden="true"></i>
+  <i class="fa fa-star-half text-warning" aria-hidden="true"></i>
+  <span class="btn btn-warning ms-2">Enroll Now</span>
+  </div>
+</div>
+</div>
+
+<!-- 2 -->
+<div class="col">
+  <div class="card border-primary sec-5-1">
+    <img class="card-img-top sec-5-img" src="https://img.freepik.com/free-vector/web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer-project-engineer-programming-software-application-design-cartoon-illustration_107791-3863.jpg?size=626&ext=jpg" alt="Title" class="img-fluid" height="200px">
+    <div class="card-body">
+      <h4 class="card-title text-primary-emphasis">CSS</h4>
+      <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident nemo autem debitis, </p>
+    <span class="me-4"><i class="fa fa-user" aria-hidden="true"></i>12342</span>
+    <i class="fa fa-star text-warning" aria-hidden="true"></i>
+    <i class="fa fa-star text-warning" aria-hidden="true"></i>
+    <i class="fa fa-star text-warning" aria-hidden="true"></i>
+    <i class="fa fa-star text-warning" aria-hidden="true"></i>
+    <i class="fa fa-star-half text-warning" aria-hidden="true"></i>
+    <span class="btn btn-warning ms-2">Enroll Now</span>
+    </div>
+  </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="col">
+    <div class="card border-primary sec-5-1">
+      <img class="card-img-top sec-5-img" src="https://img.freepik.com/free-vector/programmers-using-javascript-programming-language-computer-tiny-people-javascript-language-javascript-engine-js-web-development-concept-bright-vibrant-violet-isolated-illustration_335657-986.jpg?size=626&ext=jpg" alt="Title" class="img-fluid" height="200px">
+      <div class="card-body">
+        <h4 class="card-title text-primary-emphasis ">JavaScript</h4>
+        <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident nemo autem debitis, </p>
+      <span class="me-4"><i class="fa fa-user" aria-hidden="true"></i>12342</span>
+      <i class="fa fa-star text-warning" aria-hidden="true"></i>
+      <i class="fa fa-star text-warning" aria-hidden="true"></i>
+      <i class="fa fa-star text-warning" aria-hidden="true"></i>
+      <i class="fa fa-star text-warning" aria-hidden="true"></i>
+      <i class="fa fa-star-half text-warning" aria-hidden="true"></i>
+      <span class="btn btn-warning ms-2">Enroll Now</span>
+      </div>
+    </div>
+    </div>
+
+    </div>
+   </div>
+
+  </div>
+
+
+  <div class="sec-3 " style="padding-top: 100px; background-color: #e5f6fc91;">
+
+    <div class="container">
+      <h1 class="text-center text-danger "> <span class="text-decoration-underline text-bg-danger rounded-3"> Live </span><span class="text-primary ms-3">Webinar</span> </h1>
+      <div class="bg-primary mx-auto  rounded-circle mb-2" style="width: 200px ; height: 5px ; " ></div>
+      <div class="bg-danger mx-auto  rounded-circle" style="width: 100px ; height: 5px ; margin-bottom: 100px;" ></div>
+      <div class="row ">
+
+<div id="myCarousel_2" class="carousel slide mb-6" data-bs-ride="carousel" data-bs-theme="light" style="margin-top: 0px;">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://img.freepik.com/free-vector/flat-design-squared-flyer-business-conference_23-2148855805.jpg?size=626&ext=jpg" alt="" width="40%" height="200px" class="mb-4 rounded"> <br>
+      <img src="https://img.freepik.com/free-psd/digital-marketing-live-webinar-corporate-social-media-post-template_202595-544.jpg?w=740&t=st=1688800404~exp=1688801004~hmac=745b0b4cbdb2b3f678e064a0d36d30d3b811614fb5bb8b41a3f58f7a5050b8d2" alt="" width="30%" height="200px" class="mb-4 rounded-circle">
+      <div class="container">
+        <div class="carousel-caption text-start">
+          <h1 class="float-end text-primary-emphasis" style="margin-top: -180px;">Webinar.</h1>
+          <p class="float-end text-primary-emphasis" style="margin-top: -120px; width: 500px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates culpa nobis laboriosam odio consequatur ratione placeat corrupti numquam, expedita facilis voluptatem commodi. Hic non temporibus consectetur similique officiis at est.</p>
+          <h1 class="float-end text-primary-emphasis" >Webinar.</h1>
+          <p class="float-end text-primary-emphasis" style="margin-top: 2px;margin-left: 150px; width: 500px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates culpa nobis laboriosam odio consequatur ratione placeat corrupti numquam, expedita facilis voluptatem commodi. Hic non temporibus consectetur similique officiis at est.
+            <br> <a class="btn btn-lg btn-warning  mt-1 ms-5" href="#">Enroll Now</a></p>
+   
+        </div>
+      </div> 
+    </div>
+    <div class="carousel-item ">
+      <img src="https://img.freepik.com/free-vector/webinar-square-flyer-template_23-2148812904.jpg?size=626&ext=jpg" alt="" width="40%" height="200px" class="mb-4 rounded"> <br>
+      <img src="https://img.freepik.com/free-psd/digital-marketing-live-webinar-corporate-social-media-post-template_202595-506.jpg?size=626&ext=jpg" alt="" width="40%" height="200px" class="mb-4 rounded">
+      <div class="container">
+        <div class="carousel-caption text-start">
+          <h1 class="float-end text-primary-emphasis" style="margin-top: -180px;">Webinar.</h1>
+          <p class="float-end text-primary-emphasis" style="margin-top: -120px; width: 500px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates culpa nobis laboriosam odio consequatur ratione placeat corrupti numquam, expedita facilis voluptatem commodi. Hic non temporibus consectetur similique officiis at est.</p>
+          <h1 class="float-end text-primary-emphasis" >Webinar.</h1>
+          <p class="float-end text-primary-emphasis" style="margin-top: 2px;margin-left: 150px; width: 500px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates culpa nobis laboriosam odio consequatur ratione placeat corrupti numquam, expedita facilis voluptatem commodi. Hic non temporibus consectetur similique officiis at est.
+            <br> <a class="btn btn-lg btn-warning  mt-1 ms-5" href="#">Enroll Now</a></p>
+   
+        </div>
+      </div> 
+    </div>
+    <div class="carousel-item ">
+      <img src="https://img.freepik.com/premium-photo/portrait-cheerful-young-arab-students-couple-showing-thumbs-up-camera_116547-22285.jpg?size=626&ext=jpg" alt="" width="40%" height="200px" class="mb-4 rounded-circle"> <br>
+      <img src="https://img.freepik.com/premium-photo/portrait-cheerful-young-arab-students-couple-showing-thumbs-up-camera_116547-22285.jpg?size=626&ext=jpg" alt="" width="40%" height="200px" class="mb-4">
+      <div class="container">
+        <div class="carousel-caption text-start">
+          <h1 class="float-end text-primary-emphasis" style="margin-top: -180px;">Webinar.</h1>
+          <p class="float-end text-primary-emphasis" style="margin-top: -120px; width: 500px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates culpa nobis laboriosam odio consequatur ratione placeat corrupti numquam, expedita facilis voluptatem commodi. Hic non temporibus consectetur similique officiis at est.</p>
+          <h1 class="float-end text-primary-emphasis" >Webinar.</h1>
+          <p class="float-end text-primary-emphasis" style="margin-top: 2px;margin-left: 150px; width: 500px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates culpa nobis laboriosam odio consequatur ratione placeat corrupti numquam, expedita facilis voluptatem commodi. Hic non temporibus consectetur similique officiis at est.
+            <br> <a class="btn btn-lg btn-warning  mt-1 ms-5" href="#">Enroll Now</a></p>
+   
+        </div>
+      </div> 
+    </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel_2" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#myCarousel_2" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+
+
+        </div>
+        </div>
+        </div>
+        </div>
+
+        <div class="container" style="margin-top: 200px;">
+          <div class="row row-cols-1 row-cols-md-2">
+            <div class="col">
+              <img src="https://img.freepik.com/free-vector/elegant-blue-gold-diploma-certificate-template_1017-17257.jpg?t=st=1688800811~exp=1688801411~hmac=42432d033af4f95b4b09d928c8a8ab307bea5d5f71caade87e5081a68f5e169f" alt=""class="img-fluid">
+            </div>
+            <div class="col  mt-5 ">
+              <h5 class="text-primary-emphasis text-center">
+                GET PROOF FOR YOUR NEWLY LEARNT SKILLS</h5>
+                <h1 class="text-primary-emphasis text-center">Get Job ready with
+                  NSDC Skill India Certificate</h1>
+                  
+<div class="col mt-4 text-center">
+  <img src="https://www.learnvern.com/images/new-home-assets/skill-nsdc-logo2.png" alt="" class="img-fluid">
+</div>
+<button class="btn btn-primary mx-auto ms-md-5">  Join For Free</button>
+            </div>
+          </div>
+        </div>
+  
+ <!-- Footer -->
+ <footer class="text-center text-lg-start bg-dark text-muted" style="margin-top: 100px;">
+   <!-- Section: Social media -->
+   <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+     <!-- Left -->
+     <div class="me-5 d-none d-lg-block text-white">
+       <span>Get connected with us on social networks:</span>
+     </div>
+     <!-- Left -->
+     
+     <!-- Right -->
+     <div class="text-white">
+       <a href="https://www.facebook.com/profile.php?id=100012351334548" target="_blank" class="me-4 text-reset">
+         <i class="fab fa-facebook-f"></i>
+       </a>
+       <a href="https://twitter.com/_Ganesh_Dutt" target="_blank" class="me-4 text-reset">
+         <i class="fab fa-twitter"></i>
+       </a>
+       <a href="https://www.google.com/" target="_blank" class="me-4 text-reset">
+         <i class="fab fa-google"></i>
+       </a>
+       <a href="https://www.instagram.com/the_ganesh_dutt/" target="_blank" class="me-4 text-reset">
+         <i class="fab fa-instagram"></i>
+       </a>
+       <a href="https://www.linkedin.com/in/ganesh-dutt-514a94243/" target="_blank" class="me-4 text-reset">
+         <i class="fab fa-linkedin"></i>
+       </a>
+       <a href="https://github.com/ganishka100" target="_blank" class="me-4 text-reset">
+         <i class="fab fa-github"></i>
+       </a>
+     </div>
+     <!-- Right --> 
+   </section>
+   <!-- Section: Social media -->
+   
+   <!-- Section: Links  -->
+   <section class="text-white">
+     <div class="container text-center text-md-start mt-5">
+       <!-- Grid row -->
+       <div class="row mt-3">
+         <!-- Grid column -->
+         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+           <!-- Content -->
+           <h6 class="text-uppercase fw-bold mb-4">
+             <i class="fas fa-gem me-3"></i>Learn and Grow
+           </h6>
+           <p>
+             Here you can use rows and columns to organize your footer content. Lorem ipsum
+             dolor sit amet, consectetur adipisicing elit.
+           </p>
+         </div>
+         <!-- Grid column -->
+   
+         <!-- Grid column -->
+         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+           <!-- Links -->
+           <h6 class="text-uppercase fw-bold mb-4">
+             Products
+           </h6>
+           <p>
+             <a href="#" class="text-reset">Angular</a>
+           </p>
+           <p>
+             <a href="#" class="text-reset">React</a>
+           </p>
+           <p>
+             <a href="#" class="text-reset">Vue</a>
+           </p>
+           <p>
+             <a href="#" class="text-reset">Laravel</a>
+           </p>
+         </div>
+         <!-- Grid column -->
+   
+         <!-- Grid column -->
+         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+           <!-- Links -->
+           <h6 class="text-uppercase fw-bold mb-4">
+             Useful links
+           </h6>
+           <p>
+             <a href="#" class="text-reset">Enroll Now</a>
+           </p>
+           <p>
+             <a href="#" class="text-reset">Settings</a>
+           </p>
+           <p>
+             <a href="#" class="text-reset">Free_Courses</a>
+           </p>
+           <p>
+             <a href="#" class="text-reset">Help</a>
+           </p>
+         </div>
+         <!-- Grid column -->
+   
+         <!-- Grid column -->
+         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+           <!-- Links -->
+           <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+           <p><i class="fas fa-home me-3"></i>Birona Khurd ole Mathura 281122</p>
+           <p>
+             <i class="fas fa-envelope me-3"></i>
+            gdutt2304@gmail.com
+           </p>
+           <p><i class="fas fa-phone me-3"></i> + 91 7078-4048-37</p>
+           <p><i class="fas fa-phone me-3"></i> + 91 7088-4048-37</p>
+           <!-- <p><i class="fas fa-print me-3"></i>+ 91 </p> -->
+         </div>
+         <!-- Grid column -->
+       </div>
+       <!-- Grid row -->
+     </div>
+   </section>
+   <!-- Section: Links  -->
+   
+   <!-- Copyright -->
+   <div class="text-center p-4 text-white" style="background-color: rgba(0, 0, 0, 0.05);">
+     © 2023 All rights reserved 
+             <a class="text-reset fw-bold" href="https://ganeshdutt100.github.io/Ganesh_Portfolio/"target="_blank">GaneshDutt.com</a>
+   </div>
+ </footer>
+ <!-- Footer -->
+</body>
+</html>
