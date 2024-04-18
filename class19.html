@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* laptop */
+        .main{
+            display: flex;
+        }
+        .main img{
+            width: 200px;
+        }
+
+
+
+        /* mobile */
+        @media only screen and (max-width:500px) {
+            .main{
+            display: flex;
+            flex-direction: column;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <img src="https://img.freepik.com/free-photo/free-photo-ramadan-kareem-eid-mubarak-royal-elegant-lamp-with-mosque-holy-gate-with-fireworks_1340-23648.jpg?t=st=1713442304~exp=1713445904~hmac=3346d541d2aec6c1dcbf2ab9791df80cc9bed2e93f60350536f86c7516fa1368&w=826" alt="">
+        <div class="text">
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit optio facere deleniti animi iste impedit! Aliquid veritatis adipisci voluptate consequuntur, ex optio minus, ipsam amet, veniam rerum cupiditate repellat perferendis!</p>
+            <button>click me </button>
+        </div>
+    </div>
+</body>
+</html>
