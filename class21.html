@@ -5,20 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-.main{
-    width: 500px;
-    height: 500px;
-   /* background: url('https://img.freepik.com/premium-photo/binding-systems_996135-13892.jpg?w=900'); */
-   transition: .5s linear;
-   margin: 200px ;
-   transform-origin: center center;
+.container {
+  /* perspective: 1000px; */
+  perspective-origin: 50% 50%;
+
 }
-/* .main:hover{
-  transform: translatex(200px);
-  transform: translatey(200px);
-  transform: translate(200px ,200px);
+
+.main {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  /* transform: rotateY(45deg); */
+  transition: .4s all linear;
+}
+.main:hover{
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  transform: rotateY(120deg);
+}
 
 
+/*
   transform: rotatex(100deg);
   transform: rotatey(100deg);
   transform: rotatez(100deg);
@@ -37,9 +45,10 @@
     </style>
 </head>
 <body>
-
-
-
+<div class="container">
+<div class="main"></div>
+</div>
+<!-- 
 <div class="main">
  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi iure temporibus, voluptas quaerat iusto expedita ullam molestias, nihil sequi dolorem assumenda, harum voluptatibus autem. Eveniet autem assumenda iste odio enim?</p>
 </div>
@@ -60,7 +69,7 @@
         <li>Lorem ipsum dolor sit amet.</li>
         <li>Lorem ipsum dolor sit amet.</li>
     </ul>
-</div>
+</div> -->
 
 
 
