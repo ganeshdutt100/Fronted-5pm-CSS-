@@ -1,0 +1,50 @@
+*{
+    margin:0;
+    padding:0;
+}
+nav{
+    background-color:black;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    padding:15px;
+}
+.logo{
+    font-size:30px;
+}
+.list a{
+    color:white;
+    margin-left:10px;
+    text-decoration:none;
+}
+
+.mainCard{
+margin-top:100px;
+display:flex;
+justify-content:space-around;
+}
+.card1{
+ width:300px;
+ height:400px;
+ /* border:1px solid black; */
+ text-align:center;
+}
+
+.card1 img{
+    width:200px;
+    height:300px;
+    border-radius:15px;
+}
+
+.btn{
+    color:white;
+    background-color:black;
+    padding:10px;
+    border-radius:10px;
+}
+.btn:hover{
+    color:black;
+    background-color:white;
+    padding:10px;
+    border-radius:10px;
+}
