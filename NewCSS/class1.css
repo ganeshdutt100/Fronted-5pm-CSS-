@@ -1,0 +1,25 @@
+/* p{
+    background-color: aqua;
+    display: inline;
+}
+
+span{
+    background-color: aquamarine;
+    display: block;
+} */
+
+/* .main , .main1{
+    background-color: blueviolet;
+    color: white;
+   display: none;
+} */
+/* p{
+    display: inline;
+} */
+
+.main1 {
+    display: inline-block;
+    height: 100px;
+    width: 400px;
+    background-color: aquamarine;
+}
