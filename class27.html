@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            background-color: red;
+            width: 400px;
+            height: 400px;
+            overflow: scroll;
+            overflow-y: hidden;
+            overflow-x: hidden;
+            position: relative;
+            color: white;
+
+        }
+
+        .box img{
+            width: 100%;
+            height: 100%;
+
+        }
+        .text{
+            transition: .5s all linear;
+
+          position: absolute;
+          color: rgb(255, 255, 255);
+          top: 0;
+          /* left: 100%; */
+          background-color: rgba(0, 0, 0, 0.205);
+          backdrop-filter: blur(10px);
+  width: 100%;
+  transform: scale(0)  rotate(0);
+        }
+        .box:hover .text{
+ /* left: 0; */
+ transform: scale(1) rotate(360deg);
+        }
+
+        .main {
+            visibility:visible;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="https://img.freepik.com/free-photo/html-css-collage-concept-with-person_23-2150062008.jpg?t=st=1715255169~exp=1715258769~hmac=41808cb51525acbd0dc3d9babc24499cb935666b0dd2fac4af2e766428bf259a&w=900" alt="">
+<div class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur modi ad optio, sit eum corporis sed explicabo! Sed, ex exercitationem consectetur illo ea quos id harum tempora quidem optio suscipit.
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur modi ad optio, sit eum corporis sed explicabo! Sed, ex exercitationem consectetur illo ea quos id harum tempora quidem optio suscipit
+
+    <!-- <img src="https://img.freepik.com/free-vector/blue-futuristic-networking-technology_53876-97395.jpg?t=st=1715255218~exp=1715258818~hmac=010af0fd89e39d9fd9cf4bf6af5a3f6b6199a74351848fe47554bb816ef5563b&w=900" alt=""> -->
+</div>
+
+    </div>
+
+
+    <div class="main">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique nostrum vel labore adipisci soluta nemo alias maiores! Voluptatum delectus corrupti totam ipsam saepe dicta itaque explicabo! Voluptatem dicta quidem corrupti?</p>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore porro, rerum molestiae esse maiores enim alias quod nisi architecto distinctio veritatis facilis repellat corrupti in praesentium inventore ratione perspiciatis consectetur.</p>
+
+
+</body>
+</html>

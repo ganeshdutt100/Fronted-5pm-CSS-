@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    /* padding: 20px; */
+
+}
+
+main{
+    background:url('https://img.freepik.com/premium-photo/female-programmer-is-writing-it-idea-called-generative-ai-office-while-seated-front-computer-screen_28914-16202.jpg?w=1060');
+    padding-bottom: 100px;
+    padding-left: 50px;
+}
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(231, 238, 10);
+    background-color: black;
+}
+
+.list{
+    display: flex;
+    gap:20px ;
+    margin-right: 50px;
+}
+
+.list a{
+     color: rgb(255, 255, 255);
+     text-decoration: none;
+     font-size: 20px;
+     /* background-color: blue; */
+     padding-top:20px ;
+     
+}
+
+.list a:hover{
+    color: yellow;
+    
+   
+}
+
+.navText{
+    color: white;
+}
+
+.navText p{
+    margin: 10px 0;
+    font-family: sans-serif;
+}
+.navTexth2{
+color:yellow;
+}
+
+.btn{
+    color: rgb(0, 0, 0);
+    background-color: yellow;
+    border: none;
+    padding: 10px 20px ;
+    margin-right:20px ;
+    border-radius: 8px;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.btn:hover{
+    color: yellow;
+    background-color: transparent;
+    border: 1px solid yellow;
+}
+.emailText{
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+}

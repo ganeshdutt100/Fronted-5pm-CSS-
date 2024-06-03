@@ -64,3 +64,13 @@ ul{
 color: black;
    border: 1px solid black;
 }
+
+
+.maincard{
+     display: flex;
+     gap: 20px;
+}
+
+.card{
+    background-color: yellow;
+}
