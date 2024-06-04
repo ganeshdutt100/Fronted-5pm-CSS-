@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+nav {
+  background-color: #22b3c1;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+
+.logo img {
+  width: 100px;
+}
+.list {
+  display: none;
+  gap: 40px;
+  color: white;
+  list-style-type: none;
+  font-size: 17px;
+  /* font-weight: bold; */
+  padding: 10px 0;
+}
+.home {
+  border-top: 1px solid white;
+}
+.list li {
+}
+
+.bar {
+  color: white;
+  font-size: 20px;
+  margin-top: 5px;
+  display: flex;
+}
+@media only screen and (min-width: 768px) {
+  .list {
+    display: flex;
+  }
+  .bar {
+    display: none;
+  }
+}
+
+/* section 2 */
+
+.sec1 {
+  background: url("	https://templatemo.com/templates/templatemo_580_woox_travel/assets/images/banner-02.jpg");
+  /* height: 100vh; */
+  background-size: cover;
+  padding: 50px;
+}
+.sec1Text {
+  color: white;
+  text-align: center;
+  padding-top: 100px;
+  font-family: sans-serif;
+}
+.sec1Text h2 {
+}
+.sec1Text h1 {
+  font-size: 63px;
+}
+.sec1Text button {
+  background: #22b3c1;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 19px;
+}
+
+.sec1Icons {
+  margin-top: 50px;
+  background-color: white;
+  width: 90%;
+  border-radius: 29px;
+  padding: 16px 5px;
+  color: #22b3c1;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-left: 11px;
+}
+.subIcons {
+  display: flex;
+  gap: 10px;
+}
+.iconsUser {
+  font-size: 39px;
+  border-radius: 50%;
+  border: 1px solid #22b3c1;
+  padding: 8px 11px;
+}
+.iconsText {
+  margin-top: 10px;
+}
+.iconsText p {
+  font-size: 18px;
+  color: gray;
+  font-weight: bold;
+}
+
+.btn {
+  background: #22b3c1;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 19px;
+}
+
+.sec1EmptyDiv {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+.empty {
+  background-color: white;
+  width: 200px;
+  height: 2px;
+}
+
+@media only screen and (min-width: 768px) {
+  .sec1Icons {
+    margin-left: 39px;
+  }
+}
