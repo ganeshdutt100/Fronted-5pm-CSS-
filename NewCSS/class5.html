@@ -15,7 +15,7 @@
 
     }*/
 
-    p::first-line {
+    /* p::first-line {
       color: red;
     }
 
@@ -29,7 +29,7 @@
 
     p::after {
       content: "`";
-    }
+    } */
 
     /* p::first-letter {
       color: blueviolet;
@@ -44,14 +44,56 @@
     input::placeholder {
       color: tomato;
     }
+
+
+    /* div h1 {
+      color: red;
+    } */
+
+    /* div>p {
+      color: orange;
+    } */
+
+    h2~p {
+      color: red;
+      background-color: black;
+    }
   </style>
 </head>
 
 <body>
+  <p>Lorem ipsum dolor sit amet.</p>
+  <h2>Lorem ipsum dolor sit amet.</h2>
+  <p>Lorem ipsum dolor sit.</p>
+  <p>Lorem ipsum dolor sit.</p>
+  <p>Lorem ipsum dolor sit.</p>
+  <p>Lorem ipsum dolor sit.</p>
+  <p>Lorem ipsum dolor sit.</p>
+  <div>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <h2>Lorem ipsum dolor sit amet.
+      <p>Lorem, ipsum dolor.</p>
+      <p>Lorem, ipsum dolor.</p>
+      <p>Lorem, ipsum dolor.</p>
+    </h2>
+    <h3>Lorem ipsum dolor sit amet.</h3>
+  </div>
+  <hr>
+  <div>
+    <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima dolorem quis dolore, commodi voluptas
+      reiciendis tempora reprehenderit modi iste repellendus sint, tempore voluptate ab adipisci, quasi placeat harum
+      quibusdam fuga.</h1>
+  </div>
   <input type="text" placeholder="Enter your text here...">
   <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis aspernatur odio earum? Omnis a eligendi
     esse,
     minima voluptatibus rem molestiae! Iure, porro aperiam illum dolores architecto nostrum fugit voluptas eius.</p>
+
+
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit culpa, labore, numquam voluptate quisquam ab est
+    accusamus officiis quam voluptates sapiente voluptas impedit veniam minima beatae vel cumque! Tenetur, culpa!</p>
 </body>
 
 </html>
